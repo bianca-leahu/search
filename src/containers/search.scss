@@ -1,0 +1,156 @@
+.search {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	background: #e5e5e5;
+
+	&__input {
+		height: 30px;
+		width: 300px;
+		outline: none;
+		border: none;
+
+		&-filter {
+			position: relative;
+
+			&-icon {
+				cursor: pointer;
+			}
+
+			&-menu {
+				position: absolute;
+				width: 298px;
+				position: absolute;
+				right: -18px;
+				top: 40px;
+				background: #fff;
+				box-shadow: 0px 2px 4px rgba(213, 210, 210, 0.75), inset 0px 0px 2px #d5d2d2;
+			}
+
+			&-menu-item {
+				height: 45px;
+				display: flex;
+				align-items: center;
+				padding: 0 15px;
+				cursor: pointer;
+				margin: 0;
+				justify-content: space-between;
+
+				img {
+					width: 20px;
+				}
+
+				&:hover {
+					background: #f2f3f4;
+				}
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1218px;
+		width: 100%;
+
+		&-bar {
+			display: flex;
+			margin-top: 200px;
+			width: 100%;
+		}
+	}
+
+	&__no-filter {
+		cursor: pointer;
+	}
+
+	&__filter {
+		height: 44px;
+		background: #fff;
+		display: flex;
+		border: 1px solid #d5d2d2;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-right: 22px;
+		padding: 0 18px;
+
+		&-icon {
+			margin-right: 15px;
+		}
+
+		&-item {
+			height: 19px;
+			border: 1px solid #d5d2d2;
+			border-radius: 10px;
+			padding: 1px 10px;
+			font-weight: bold;
+			font-size: 11px;
+			line-height: 17px;
+			color: #0b0b0d;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+	}
+
+	&__list {
+		text-transform: capitalize;
+		background: #fff;
+		width: 298px;
+		box-shadow: 0px 2px 4px rgba(213, 210, 210, 0.75), inset 0px 0px 2px #d5d2d2;
+		margin-top: 6px;
+
+		&-item {
+			height: 45px;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			padding: 0 15px;
+			font-size: 14px;
+			line-height: 21px;
+			color: #0b0b0d;
+			justify-content: space-between;
+
+			span {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				display: block;
+
+				&.-draft {
+					background: #b3c3cb;
+				}
+				&.-progress {
+					background: #f5a623;
+				}
+				&.-ready {
+					background: #2774a6;
+				}
+				&.-completed {
+					background: #00a66f;
+				}
+			}
+
+			&:hover {
+				background: #f2f3f4;
+			}
+		}
+	}
+}
+
+.d-flex {
+	display: flex;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
+.align-items-center {
+	align-items: center;
+}
