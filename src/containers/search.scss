@@ -66,7 +66,7 @@
 	}
 
 	&__filter {
-		height: 44px;
+		min-height: 44px;
 		background: #fff;
 		display: flex;
 		border: 1px solid #d5d2d2;
@@ -78,7 +78,14 @@
 
 		&-icon {
 			margin-right: 15px;
-		}
+    }
+    
+    &-input-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
 
 		&-item {
 			height: 19px;
@@ -91,7 +98,8 @@
 			color: #0b0b0d;
 			text-transform: uppercase;
 			display: flex;
-			align-items: center;
+      align-items: center;
+      white-space: nowrap;
 			cursor: pointer;
 			margin-right: 10px;
 		}
@@ -143,14 +151,6 @@
 	}
 }
 
-.d-flex {
-	display: flex;
-}
-
 .d-inline-block {
 	display: inline-block;
-}
-
-.align-items-center {
-	align-items: center;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './search.scss';
 import SearchIcon from '../assets/images/search.svg';
 import FilterIcon from '../assets/images/filter.svg';
 import NoFilterIcon from '../assets/images/no-filter.svg';
@@ -13,6 +12,7 @@ import {
   getStatusListType,
   getCostsList,
 } from '../assets/helpers';
+import './search.scss';
 
 export default class Search extends Component {
   state = {
@@ -218,7 +218,7 @@ export default class Search extends Component {
         <div className="search__content">
           <div className="search__content-bar">
             <div className="search__filter">
-              <div className="d-flex align-items-center">
+              <div className="search__filter-input-container">
                 <img
                   src={SearchIcon}
                   alt="search"
@@ -238,7 +238,7 @@ export default class Search extends Component {
                     this.nameInput = input;
                   }}
                   onKeyDown={this.keyPress}
-                  type="text"
+                  type={isCosts ? 'number' : 'text'}
                   onChange={(e) => this.getValues(e.target.value)}
                   value={inputValue}
                   placeholder={
